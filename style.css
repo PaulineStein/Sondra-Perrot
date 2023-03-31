@@ -1,0 +1,529 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('typo/Montserrat-VariableFont_wght.ttf')format('truetype-variations');
+}
+
+:root {
+  --color_1: #FFF766;
+  --color_2: #3C3C3B;
+}
+
+body,
+html {
+  padding: 0px !important;
+  margin: 0px !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+body {
+  position: relative;
+  font-family: 'Montserrat';
+  font-variation-settings: "wght" 300;
+  color: var(--color_2);
+
+
+  /* if you want to remove the background-color and replace it with an image. You have to delete (or to comment the code) this property : */
+  background-color: var(--color_1);
+
+  /* And add to the code these properties and complete the url : 
+  background-image: url('img/...');
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
+   */
+}
+
+
+
+
+
+/*HEADER*/
+
+.title_set {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+.ball_decoration {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background-color: var(--color_2);
+  border-radius: 10px;
+}
+
+#ball_1 {
+  top: -10px;
+  left: -7px;
+}
+
+#ball_2 {
+  bottom: -9px;
+  right: 0;
+
+}
+
+h1 {
+  text-decoration: none;
+  margin: 0px;
+  font-size: clamp(2.5rem, -0.313rem + 5.859vw, 3.438rem);
+  font-variation-settings: "wght" 800;
+  padding-left: 20px;
+  border-left: solid var(--color_2) 2px;
+}
+
+h2 {
+  position: relative;
+  width: clamp(14.688rem, -1.25rem + 33.203vw, 20rem);
+  text-decoration: none;
+  margin: 0px;
+  padding: 0px 0px 15px 20px;
+  font-size: clamp(2.5rem, -0.313rem + 5.859vw, 3.438rem);
+  font-variation-settings: "wght" 400;
+  border-left: solid var(--color_2) 2px;
+  border-bottom: solid var(--color_2) 2px;
+  border-radius: 0px 0px 0px 20px;
+}
+
+
+
+/*MAIN*/
+
+.laptop {
+  margin-inline: 25px;
+  padding-top: 25px;
+  width: calc(100% - 50px);
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+.laptop>ol:nth-child(1) {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+  grid-template-rows: repeat(9, min-content);
+}
+
+
+main>ol:nth-child(1)>li:nth-child(1) {
+  grid-area: 9/1/10/3;
+}
+
+main>ol:nth-child(1)>li:nth-child(2) {
+  grid-area: 8/3/9/3;
+}
+
+main>ol:nth-child(1)>li:nth-child(3) {
+  grid-area: 7/4/8/4;
+}
+
+main>ol:nth-child(1)>li:nth-child(4) {
+  grid-area: 6/5/7/5;
+}
+
+main>ol:nth-child(1)>li:nth-child(5) {
+  grid-area: 5/6/6/6;
+}
+
+main>ol:nth-child(1)>li:nth-child(6) {
+  grid-area: 4/7/5/7;
+}
+
+main>ol:nth-child(1)>li:nth-child(7) {
+  grid-area: 3/8/4/8;
+}
+
+main>ol:nth-child(1)>li:nth-child(8) {
+  grid-area: 2/9/3/9;
+}
+
+main>ol:nth-child(1)>li:nth-child(9) {
+  grid-area: 1/9/2/11;
+}
+
+li {
+  position: relative;
+}
+
+li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: -1px;
+  height: clamp(1.438rem, 0.125rem + 2.734vw, 1.875rem);
+  /* height: 30px; */
+  border: 2px solid var(--color_2);
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-bottom-right-radius: 20px;
+}
+
+li {
+  list-style-type: none;
+  text-align: end;
+  padding-right: 10px;
+  padding-bottom: 20px;
+}
+
+li::after {
+  content: "";
+  position: absolute;
+  top: clamp(1.563rem, 0.25rem + 2.734vw, 2rem);
+  /* top: 32px; */
+  left: -1px;
+  right: 20px;
+  height: 20px;
+  border: 2px solid var(--color_2);
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-top-left-radius: 20px;
+}
+
+
+img {
+  width: 63%;
+  height: auto;
+}
+
+.wheel::before,
+.wheel::after {
+  border: 0;
+}
+
+.wheel {
+  padding: 0;
+}
+
+#wheel_6,
+#wheel_5,
+#wheel_4,
+#wheel_3,
+#wheel_2,
+#wheel_8,
+#wheel_7 {
+  display: none;
+}
+
+
+.text {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+  height: 110px;
+}
+
+.text_place {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.text::after {
+  border: 0;
+}
+
+.text::before {
+  height: 125px;
+  left: 0;
+}
+
+#text_5,
+#text_4,
+#text_3,
+#text_2,
+#text_6,
+#text_7,
+#text_8 {
+  display: none;
+}
+
+
+.topic {
+  position: relative;
+  font-size: clamp(1.063rem, -0.625rem + 3.516vw, 1.625rem);
+  font-variation-settings: "wght" 500;
+}
+
+.topic_click {
+  cursor: pointer;
+}
+
+.link::before {
+  height: clamp(1.875rem, 0.563rem + 2.734vw, 2.313rem);
+  top: -7px;
+}
+
+.number {
+  position: absolute;
+  font-size: clamp(1.125rem, -0.375rem + 3.125vw, 1.625rem);
+  font-variation-settings: "wght" 600;
+}
+
+#number_1 {
+  right: -20px;
+  bottom: 20px;
+}
+
+#number_2,
+#number_3,
+#number_4,
+#number_5,
+#number_6 {
+  right: -25px;
+  bottom: 20px;
+}
+
+h5 {
+  text-decoration: none;
+  font-size: clamp(1rem, 0.438rem + 1.172vw, 1.188rem);
+  font-variation-settings: "wght" 600;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  text-decoration: none;
+  margin-block: 0;
+  font-size: clamp(0.688rem, -0.25rem + 1.953vw, 1rem);
+  font-variation-settings: "wght" 400;
+}
+
+#ball_3 {
+  bottom: -5px;
+  left: 0px;
+}
+
+
+
+
+/* SMARTPHONE */
+.smartphone {
+  display: none;
+  position: relative;
+  padding-top: clamp(0.938rem, 0.491rem + 2.232vw, 1.563rem);
+  margin-inline: clamp(0.938rem, 0.491rem + 2.232vw, 1.563rem);
+}
+
+.smartphone-image img {
+  width: 100%;
+  height: auto;
+}
+
+.smartphone-image {
+  margin-top: 50px;
+  border-radius: 20px;
+  border: 2px solid var(--color_2);
+  background-image: url('img/img_1.jpg');
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+}
+
+.container-empty {
+  margin-right: 35px;
+  margin-left: 50px;
+  margin-top: -2px;
+  padding-left: 50px;
+  height: 50px;
+  border-right: solid var(--color_2) 2px;
+  border-top: solid var(--color_2) 2px;
+  border-top-right-radius: 20px;
+}
+
+.set-texte-wheel {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-set-text {
+  flex: 1;
+  position: relative;
+}
+
+.title-smartphone {
+  border-bottom: solid var(--color_2) 2px;
+  padding-left: clamp(0.938rem, 0.491rem + 2.232vw, 1.563rem);
+  margin-top: 15px;
+}
+
+.text-smartphone {
+  padding-left: clamp(0.938rem, 0.491rem + 2.232vw, 1.563rem);
+  padding-right: 20px;
+  padding-top: 5px;
+}
+
+.wheel-smartphone {
+  width: 70px;
+}
+
+#smartphone_text_2,
+#smartphone_text_3,
+#smartphone_text_4,
+#smartphone_text_5,
+#smartphone_text_6,
+#smartphone_text_7,
+#smartphone_text_8,
+#smartphone_title_2,
+#smartphone_title_3,
+#smartphone_title_4,
+#smartphone_title_5,
+#smartphone_title_6,
+#smartphone_title_7,
+#smartphone_title_8,
+#wheel_smartphone_2,
+#wheel_smartphone_3,
+#wheel_smartphone_4,
+#wheel_smartphone_5,
+#wheel_smartphone_6,
+#wheel_smartphone_7,
+#wheel_smartphone_8 {
+  display: none;
+}
+
+
+
+/*FOOTER*/
+
+.information_set {
+  position: absolute;
+  bottom: 20px;
+  right: 25px;
+}
+
+h6 {
+  text-decoration: none;
+  margin: 0px;
+  font-size: 14px;
+  text-align: right;
+  font-variation-settings: "wght" 400;
+}
+
+.name {
+  display: block;
+}
+
+.bold {
+  text-decoration: none;
+  font-variation-settings: "wght" 600;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.underline:hover {
+  font-variation-settings: "wght" 600;
+}
+
+
+
+
+/* Media queries */
+@media (max-width: 900px) {
+  #number_1 {
+    right: -17px;
+    bottom: 20px;
+  }
+
+  #number_2,
+  #number_3,
+  #number_4,
+  #number_5,
+  #number_6 {
+    right: -19px;
+    bottom: 20px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .header-laptop {
+    display: none;
+  }
+
+  .laptop {
+    display: none;
+  }
+
+  .information_set {
+    left: 20px;
+    bottom: 25px;
+    width: calc(100% - 40px);
+
+  }
+
+  h6 {
+    text-align: center;
+  }
+
+  .name {
+    display: inline;
+  }
+
+  .name::after {
+    content: ',';
+  }
+
+  .smartphone {
+    display: block;
+  }
+
+  h1 {
+    font-size: clamp(1.563rem, 0.893rem + 3.348vw, 2.5rem);
+    padding-left: clamp(0.938rem, 0.491rem + 2.232vw, 1.563rem);
+  }
+
+  h2 {
+    font-size: clamp(1.563rem, 0.893rem + 3.348vw, 2.5rem);
+    padding-left: clamp(0.938rem, 0.491rem + 2.232vw, 1.563rem);
+    padding-bottom: 10px;
+    display: inline-block;
+    width: auto;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  .ball_decoration {
+    width: 13px;
+    height: 13px;
+  }
+
+  #ball_1 {
+    left: -5px;
+    top: 12px;
+  }
+
+  #ball_2 {
+    left: -5px;
+    top: 28px;
+  }
+
+}
+
+
+
+@media (max-width: 375px) {
+  h6 {
+    font-size: 13px;
+  }
+
+  .name {
+    display: block;
+  }
+
+  .name::after {
+    content: '';
+  }
+}
